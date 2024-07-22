@@ -4,7 +4,7 @@ This project demonstrates a simple CRUD (Create, Read, Update, Delete) applicati
 
 # Setup Instructions
 
-  -> Create a directory, open cmd in directory path  and clone CRUD - FastAPI Project
+  -> Create a directory, open cmd in directory path  and clone CRUD-FastAPI project
   
       https://github.com/abynxv/CRUD-FastAPI.git
 
@@ -35,80 +35,77 @@ This project demonstrates a simple CRUD (Create, Read, Update, Delete) applicati
       cd fastapi_project
       uvicorn app.main:app --reload
 
+# CRUD-FastAPI Project API Endpoints
 
-# FastAPI-CRUD Project: API Endpoints
-
-Department
+Departments
 
 1.Create a Department
 
     Endpoint    : POST /departments/
     Description : Create a new department.
     Request Body:
-          {
-            "name"                : "string",
-            "number_of_employees" : 0
-          }
-    Response    :
-          {
-            "id"                  : "integer",
-            "name"                : "string",
-            "number_of_employees" : "integer"
-          }
-
+    {
+      "name"                : "string",
+      "number_of_employees" : 0
+    }
+    Response:
+    {
+      "id"                  : "integer",
+      "name"                : "string",
+      "number_of_employees" : "integer"
+    }
 2.Get a Department by ID
 
     Endpoint    : GET /departments/{department_id}
     Description : Retrieve a department by its ID.
     Response    :
-          {
-            "id"                  : "integer",
-            "name"                : "string",
-            "number_of_employees" : "integer"
-          }
+    {
+      "id"                  : "integer",
+      "name"                : "string",
+      "number_of_employees" : "integer"
+    }
 
 3.Get All Departments
 
     Endpoint    : GET /departments/
     Description : Retrieve a list of all departments.
-    Query Parameters :
-        skip         : Integer, number of records to skip (default: 0)
-        limit        : Integer, maximum number of records to return (default: 100)
-    Response    :
-        [
-          {  
-            "id"                  : "integer",
-            "name"                : "string",
-            "number_of_employees" : "integer"
-          }
-        ]
+    Parameters  :
+                skip    : Integer, number of records to skip (default: 0)
+                limit   : Integer, maximum number of records to return (default: 100)
+    Response:
+    [
+    {
+      "id"                 : "integer",
+      "name"               : "string",
+      "number_of_employees": "integer"
+    }
+    ]
 
 4.Update a Department by ID
 
     Endpoint    : PUT /departments/{department_id}
     Description : Update an existing department by its ID.
     Request Body:
-          {
-            "name"                : "string",
-            "number_of_employees" : "integer"
-          }
-
-    Response    :  
-          {
-            "id"                  : "integer",
-            "name"                : "string",
-            "number_of_employees" : "integer"
-          }
+    {
+      "name": "string",
+      "number_of_employees": "integer"
+    }
+    Response    :
+    {
+      "id"                  : "integer",
+      "name"                : "string",
+      "number_of_employees" : "integer"
+    }
 5.Delete a Department by ID
 
     Endpoint    : DELETE /departments/{department_id}
     Description : Delete a department by its ID.
     Response    :
-          {
-            "id"                  : "integer",
-            "name"                : "string",
-            "number_of_employees" : "integer"
-          }
+    {
+      "id"                  : "integer",
+      "name"                : "string",
+      "number_of_employees" : "integer"
+    }
 
 Employees
 
@@ -117,68 +114,68 @@ Employees
     Endpoint    : POST /employees/
     Description : Create a new employee.
     Request Body:
-          {
-            "name"          : "string",
-            "department_id" : "integer"
-          }
+    {
+      "name"          : "string",
+      "department_id" : "integer"
+    }
     Response:
-          {
-            "id"            : "integer",
-            "name"          : "string",
-            "department_id" : "integer"
-          }
+    {
+      "id"            : "integer",
+      "name"          : "string",
+      "department_id" : "integer"
+    }
 
 2.Get an Employee by ID
 
     Endpoint    : GET /employees/{employee_id}
     Description : Retrieve an employee by its ID.
     Response    :
-          {
-            "id"            : "integer",
-            "name"          : "string",
-            "department_id" : "integer"
-          }
+    {
+      "id"            : "integer",
+      "name"          : "string",
+      "department_id" : "integer"
+    }
 
 3.Get All Employees
 
     Endpoint    : GET /employees/
     Description : Retrieve a list of all employees.
-    Query Parameters :
-        skip         : Integer, number of records to skip (default: 0)
-        limit        : Integer, maximum number of records to return (default: 100)
-    Response    :
-        [
-          {
-            "id"            : "integer",
-            "name"          : "string",
-            "department_id" : "integer"
-          }
-        ]
+    Parameters  :
+                skip  : Integer, number of records to skip (default: 0)
+                limit : Integer, maximum number of records to return (default: 100)
+    Response````:
+    [
+    {
+     "id": "integer",
+     "name": "string",
+     "department_id": "integer"
+    }
+    ]
 
 4.Update an Employee by ID
 
     Endpoint    : PUT /employees/{employee_id}
     Description : Update an existing employee by its ID.
     Request Body:
-          {
-            "name"          : "string",
-            "department_id" : "integer"
-          }
+    {
+      "name"          : "string",
+      "department_id" : "integer"
+    }
+    Response:
+    {
+      "id"            : "integer",
+      "name"          : "string",
+      "department_id" : "integer"
+    }
 
-    Response    :
-          {
-            "id"            : "integer",
-            "name"          : "string",
-            "department_id" : "integer
-          }
-
-5.Delete an Employee by ID
+Delete an Employee by ID
 
     Endpoint    : DELETE /employees/{employee_id}
     Description : Delete an employee by its ID.
     Response    :
-          {
-            "id"            : "integer",
-            "name"          : "string",
-            "department_id" : "integer"
-          }
+    {
+      "id": "integer",
+      "name": "string",
+      "department_id": "integer"
+    }
+

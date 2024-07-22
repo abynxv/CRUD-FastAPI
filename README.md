@@ -1,11 +1,10 @@
 # CRUD-FastAPI
 
-This project implements a CRUD (Create, Read, Update, Delete) API for managing employees and departments using SQLAlchemy, a powerful ORM (Object-Relational Mapping) library for Python. 
-The project provides endpoints to interact with a relational database, allowing users to perform operations such as creating, retrieving, updating, and deleting records for employees and departments.
+This project demonstrates a simple CRUD (Create, Read, Update, Delete) application using the FastAPI framework. It is designed to manage departments and employees within an organization. The project includes endpoints for creating, reading, updating, and deleting records in a SQLite database, leveraging SQLAlchemy for ORM (Object-Relational Mapping) and Pydantic for data validation.
 
 # Setup Instructions
 
-  -> Create a directory, open cmd in directory path  and clone Vendor-Navigator project
+  -> Create a directory, open cmd in directory path  and clone CRUD - FastAPI Project
   
       https://github.com/abynxv/CRUD-FastAPI.git
 
